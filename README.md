@@ -24,4 +24,4 @@ This project is created with the following technologies:
 To run this project locally, follow these steps:
 
 1. Clone the repository:
-$git clone https://github.com/d9870/Bharat-Intern-Task1--video-conferencing-app
+$ git clone https://github.com/d9870/Bharat-Intern-Task1--video-conferencing-app
