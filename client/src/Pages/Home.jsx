@@ -1,13 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSocket } from "../context/SocketProvider";
-import { BsCameraVideo } from "react-icons/bs";
-import { MdOutlineKeyboardVoice } from "react-icons/md";
-import { BiPhoneCall } from "react-icons/bi";
-import { BiExport } from "react-icons/bi";
-import { BsChat } from "react-icons/bs";
-// import YES from "../assets/yes1.png";
-// import "./Lobby.css";
 
 const LobbyScreen = () => {
   const [email, setEmail] = useState("");
@@ -75,15 +68,6 @@ const LobbyScreen = () => {
         <br />
         <button>Join</button>
       </form>
-      {/* <img src ="https://support.signal.org/hc/article_attachments/360065438911/iphone-video-call-small.gif"/> */}
-      {/* <img src={YES} alt='About Image' className="img2"/> */}
-      <article>
-        <BsCameraVideo className="icon-1" />
-        <MdOutlineKeyboardVoice className="icon-2" />
-        <BiPhoneCall className="icon-3" />
-        <BiExport className="icon-4" />
-        <BsChat className="icon-5" />
-      </article>
     </div>
   );
 };
