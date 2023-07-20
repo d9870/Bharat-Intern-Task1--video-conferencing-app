@@ -1,8 +1,9 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSocket } from "../Components/SocketProvider";
+import "./Home.css";
 
-const LobbyScreen = () => {
+const Home = () => {
   const [email, setEmail] = useState("");
   const [room, setRoom] = useState("");
 
@@ -72,4 +73,4 @@ const LobbyScreen = () => {
   );
 };
 
-export default LobbyScreen;
+export default Home;

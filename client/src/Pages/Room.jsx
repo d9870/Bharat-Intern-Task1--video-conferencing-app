@@ -9,15 +9,6 @@ const RoomPage = () => {
   const [myStream, setMyStream] = useState();
   const [remoteStream, setRemoteStream] = useState();
 
-  const [isVideoStopped, setIsVideoStopped] = useState(false);
-  const [isAudioStopped, setIsAudioStopped] = useState(false);
-
-  const toggleVideo = () => {
-    setIsVideoStopped((prevStopped) => !prevStopped);
-    const videoTrack = myStream.getVideoTracks()[0];
-    videoTrack.enabled = !videoTrack.enabled;
-  };
-
   const handleUserJoined = useCallback(({ email, id }) => {
     console.log(`Email ${email} joined room`);
     setRemoteSocketId(id);
@@ -152,16 +143,6 @@ const RoomPage = () => {
           />
         </>
       )}
-      <div>
-        <button className="muteButton" onClick={toggleVideo}>
-          {isVideoStopped ? (
-            <i class="fas fa-video-slash"></i>
-          ) : (
-            <i class="fas fa-video"></i>
-          )}
-          console.log("Video Muted");
-        </button>
-      </div>
       {remoteStream && (
         <>
           <h1> Remote Stream </h1>
